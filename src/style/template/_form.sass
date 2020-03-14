@@ -116,6 +116,13 @@
     cursor: pointer
     outline: none
     transition: all 0.2s ease-out
+    &:disabled
+      background-color: #9b9b9b
+      transition: all 0.2s ease-out
+      cursor: default
+      &:hover
+        background-color: #9b9b9b
+        transition: all 0.2s ease-out
     &:hover
       transition: all 0.2s ease-out
       background-color: #3b77df
