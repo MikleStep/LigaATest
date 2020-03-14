@@ -81,55 +81,55 @@
             Зарегистрируй
             свой бренд
           </h3>
-          <form class="form__item" id="first-step">
+          <form method="post" action="" name="first-step" class="form__item" id="first-step">
             <fieldset>
               <p class="form__steps">шаг 1 из 3</p>
               <p class="form__description">Введи название и нишу в который ты хочешь зарегистрировать, чтобы проверить
                 не занято ли оно уже кем то другим</p>
               <div class="form__group">
                 <input class="form__input form__input--top" type="text" name="brand"
-                  placeholder="Название  вашего бренда" id="form__input--brand" minlength="1"/>
+                  placeholder="Название вашего бренда" id="form__input--brand" minlength="1" required/>
                 <label for="form__input--brand">Название вашего бренда</label>
               </div>
               <div class="form__group">
                 <input class="form__input form__input--down" type="text" name="sphere" placeholder="Сфера деятельности"
-                  id="form__input--sphere" minlength="1"/>
+                  id="form__input--sphere" minlength="1" required/>
                 <label for="form__input--sphere">Сфера деятельности</label>
               </div>
               <p class="form__example">пример: <span>Старбакс - Kофейня</span></p>
-              <input type="button" name="next" class="form__button" value="Проверить" />
+              <input type="button" name="next" class="form__button" id="first-submit" value="Проверить" disabled="true" />
             </fieldset>
           </form>
         </div>
       </div>
-      <div class="form form__second">
+      <div class="form form__second disable">
         <div class="wrapper">
           <div class="form__notice">
             <p>Марка <span class="form__notice--highlight">Старбакс</span> свободна в нише «кофейня», вы можете подать
               заявку на регистрацию сейчас
               в форме ниже</p>
           </div>
-          <form class="form__item" id="second-step">
+          <form method="post" action="" name="second-step" class="form__item" id="second-step">
             <fieldset>
               <p class="form__steps">шаг 2 из 3</p>
               <p class="form__description">Чтобы продолжить регистрировать марку «Старбакс» просто заполните форму ниже
                 и дайте ответ на 5 простых вопросов от нашего менеджера. Это займет не больше 10 минут. </p>
               <div class="form__group">
-                <input class="form__input form__input--top" type="text" name="name" placeholder="Ваше имя" id="form__input--name" minlength="1"/>
+                <input class="form__input form__input--top" type="text" name="name" placeholder="Ваше имя" id="form__input--name" minlength="1" required/>
                 <label for="form__input--name">Ваше имя</label>
               </div>
               <div class="form__group">
-                <input class="form__input form__input--down" type="tel" name="tel" id="tel" placeholder="Номер телефона"
+                <input class="form__input form__input--down" type="tel" name="tel" id="form__input--tel" placeholder="Номер телефона"
                   id="form__input--tel" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" minlength="10" />
-                <label for="form__input--tel" >Номер
+                <label for="form__input--tel" required>Номер
                   телефона</label>
               </div>
-              <input type="button" name="next" class="form__button" value="Подать заявку" />
+              <input type="button" id="second-submit" name="next" class="form__button" value="Подать заявку" disabled="true" />
             </fieldset>
           </form>
         </div>
       </div>
-      <div class="form form__third">
+      <div class="form form__third disable">
         <div class="wrapper">
           <h3 class="form__title">
             Ваша заявка
