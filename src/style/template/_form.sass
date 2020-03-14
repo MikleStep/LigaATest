@@ -2,10 +2,11 @@
   position: relative
   background-color: #ffffff
   border-radius: 25px
-  padding-top: 50px
+  padding-top: 28px
   padding-bottom: 28px
   max-width: 375px
   margin: 0 auto
+  margin-bottom: 105px
   &::after, &::before
     content: ''
     position: absolute
@@ -26,6 +27,7 @@
     font-size: 3.2rem
     line-height: 4.2rem
     margin-bottom: 30px
+    padding-top: 22px
   &__item
     fieldset
       border: none
@@ -54,11 +56,17 @@
     input:placeholder-shown + label 
       opacity: 0
       transform: translateY(1rem)
-    input:required + .help-text::before 
-      content: '*Required'
-
+    input:invalid
+      transition: all 0.2s ease-out
+      background-image: url("data:image/svg+xml,%3Csvg width='30px' height='30px' viewBox='0 0 30 30' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg transform='translate%28-128.000000, -59.000000%29' fill='%23F44336'%3E%3Cpolygon points='157.848404 61.9920213 145.980053 73.8603723 157.848404 85.7287234 154.856383 88.7207447 142.988032 76.8523936 131.119681 88.7207447 128.12766 85.7287234 139.996011 73.8603723 128.12766 61.9920213 131.119681 59 142.988032 70.8683511 154.856383 59'%3E%3C/polygon%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+        
+    input:focus:valid 
+      border-color: #EFEFEF
+      transition: all 0.2s ease-out
+      background-image: url("data:image/svg+xml,%3Csvg width='45px' height='34px' viewBox='0 0 45 34' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg transform='translate%28-56.000000, -59.000000%29' fill='%232EEC96'%3E%3Cpolygon points='70.1468531 85.8671329 97.013986 59 100.58042 62.5664336 70.1468531 93 56 78.8531469 59.5664336 75.2867133'%3E%3C/polygon%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
 
   &__input
+    position: relative
     width: 100%
     height: 60px
     padding-top: 28px
@@ -72,6 +80,9 @@
     font-size: 1.4rem
     color: #000000
     outline: none
+    background-repeat: no-repeat;
+    background-position: right 2rem center;
+    background-size: 1.75rem;
     &::-webkit-input-placeholder 
       color: rgba(0, 0, 0, 0.4) 
     &--top
@@ -86,7 +97,7 @@
     font-size: 1rem
     line-height: 1.8rem
     color: rgba(0, 0, 0, 0.4)
-    margin-bottom: 21px
+    
   &__button
     width: 100%
     border: none
@@ -96,6 +107,7 @@
     padding-left: 20px
     padding-right: 20px
     border-radius: 20px
+    margin-top: 21px
     background-color: #6894DF
     color: #ffffff
     font-size: 1.4rem
@@ -110,4 +122,40 @@
     &:active
       background-color: #346cce
       transition: all 0.1s ease-out
-  
+  &__notice
+    background-color: rgba(58, 211, 135, 0.1)
+    border-radius: 20px
+    padding-top: 18px
+    padding-bottom: 24px
+    padding-left: 20px
+    padding-right: 24px
+    margin-bottom: 20px
+    font-size: 1.4rem
+    line-height: 2rem
+    font-family: $KAHeavy
+    &--highlight
+      color: #3AD387
+  &__note
+    font-size: 1.2rem
+    line-height: 1.8rem
+    color: #000000
+    font-family: $KAMedium
+    margin-bottom: 55px
+  &__gratitude
+    font-size: 2rem
+    line-height: 2.2rem
+    font-family: $caveatRegular
+    margin-bottom: 10px
+    p
+      margin-bottom: 20px
+  &__social
+    display: flex
+    &--item
+      margin-right: 42px
+  &__first
+    display: block
+  &__second
+    display: block
+  &__third
+    display: block
+    padding-bottom: 55px 
