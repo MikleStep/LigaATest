@@ -1,0 +1,18 @@
+.wrapper
+  +wrapper
+  max-width: 375px
+  display: flex
+  flex-direction: column
+.clearfix:before,
+.clearfix:after 
+  content: ""
+  display: table
+
+.clearfix:after 
+  clear: both
+  
+.clearfix 
+  zoom: 1
+@media screen and (max-width: 1024px)
+  .wrapper
+    padding: 0 30px
