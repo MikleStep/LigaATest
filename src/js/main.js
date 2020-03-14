@@ -7,17 +7,17 @@ $(document).ready(function() {
   popupInit();
   formInit();
 });
-$('.form__first').on('mouseout', function () {
+$('.form__first').on('keyup', function () {
   firstform();
 })
-$('.form__second').on('mouseout', function () {
+$('.form__second').on('keyup', function () {
   secondform();
 })
 $('#first-submit').click(function () {
-  $('.form__first').addClass('disable').fadeOut(300);
-  $('.form__second').removeClass('disable').fadeIn(300);
+  $('.form__first').fadeOut(300);
+  $('.form__second').delay(300).fadeIn(300);
 });
 $('#second-submit').on('click', function () {
-  $('.form__second').addClass('disable').fadeOut(300);
-  $('.form__third').removeClass('disable').fadeIn(300);
+  $('.form__second').fadeOut(300);
+  $('.form__third').delay(300).fadeIn(300);
 });

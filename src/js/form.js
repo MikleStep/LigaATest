@@ -22,7 +22,7 @@ export const firstValid = () => {
 export const secondValid = () => {
   var name = $('#form__input--name').val();
   var tel = $('#form__input--tel').val();
-  if (name.length != 0 && tel.length == 18) {
+  if (name.length != 0 && tel.length > 17 && tel.indexOf('_') < 0) {
     $('#second-submit').prop('disabled', false);
   } else {
     $('#second-submit').prop('disabled', true);
