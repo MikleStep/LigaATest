@@ -82,6 +82,15 @@
       color: rgba(0, 0, 0, 0.4) 
     &--top
       border-bottom: 1px solid #EFEFEF
+    &:focus::-webkit-input-placeholder 
+      color: transparent
+    &:focus::-moz-placeholder 
+      color: transparent
+    &:focus:-moz-placeholder  
+      color: transparent
+    &:focus:-ms-input-placeholder 
+      color: transparent
+
   &__error
     padding-left: 20px
     font-family: $KARegular 
@@ -121,6 +130,9 @@
     cursor: pointer
     outline: none
     transition: all 0.2s ease-out
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
     &:disabled
       background-color: #9b9b9b
       transition: all 0.2s ease-out

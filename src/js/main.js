@@ -77,3 +77,9 @@ $('#second-submit').on('click', function secondStepError() {
   }
 
 });
+$("input").focus(function () {
+  $('.form__example').css("color", "#4C79C9");
+});
+$("input").blur(function () {
+  $('.form__example').css("color", "rgba(0, 0, 0, 0.4)");
+});
