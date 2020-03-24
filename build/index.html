@@ -93,7 +93,9 @@
                   id="form__input--sphere" minlength="1" required/>
               </div>
               <p class="form__example">пример: <span>Старбакс - Kофейня</span></p>
-              <input type="button" name="next" class="form__button" id="first-submit" value="Проверить" disabled="true" />
+              <div class="form__error form__error--first">
+              </div>
+              <input type="button" name="next" class="form__button" id="first-submit" value="Проверить" />
             </fieldset>
           </form>
         </div>
@@ -115,7 +117,9 @@
                 <input class="form__input form__input--down" type="tel" name="tel" id="form__input--tel" placeholder="Номер телефона"
                   id="form__input--tel" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" minlength="10" />
               </div>
-              <input type="button" id="second-submit" name="next" class="form__button" value="Подать заявку" disabled="true" />
+              <div class="form__error form__error--second">
+              </div>
+              <input type="button" id="second-submit" name="next" class="form__button" value="Подать заявку" />
             </fieldset>
           </form>
         </div>

@@ -48,6 +48,18 @@
     border: 1px solid #EFEFEF
     border-radius: 24px
     transition: all 0.2s ease-out
+    margin-bottom: 10px
+    &.active
+      border-color: #4C79C9
+      transition: all 0.2s ease-out
+    &:focus-within
+      border-color: #4C79C9
+      transition: all 0.2s ease-out
+    &:focus-within:invalid
+      transition: all 0.2s ease-out
+    &:focus-within:valid
+      border-color: #4C79C9 
+      transition: all 0.2s ease-out
   &__input
     position: relative
     width: 100%
@@ -63,23 +75,25 @@
     font-size: 1.4rem
     color: #000000
     outline: none
-    background-repeat: no-repeat;
-    background-position: right 2rem center;
-    background-size: 1.75rem;
+    background-repeat: no-repeat
+    background-position: right 2rem center
+    background-size: 1.75rem
     &::-webkit-input-placeholder 
       color: rgba(0, 0, 0, 0.4) 
     &--top
       border-bottom: 1px solid #EFEFEF
-    &--down
-      margin-bottom: 4px
-  &__wrapper:focus-within
-    border-color: #4C79C9
+  &__error
+    padding-left: 20px
+    font-family: $KARegular 
+    font-style: italic
+    font-size: 1rem
+    line-height: 1.8rem
+    color: #4C79C9
+    display: none
     transition: all 0.2s ease-out
-  &__wrapper:focus-within:invalid
-    transition: all 0.2s ease-out
-  &__wrapper:focus-within:valid
-    border-color: #4C79C9 
-    transition: all 0.2s ease-out
+    p
+      margin-bottom: 10px
+  
     
   &__example
     padding-left: 20px
@@ -87,6 +101,7 @@
     font-size: 1rem
     line-height: 1.8rem
     color: rgba(0, 0, 0, 0.4)
+    margin-bottom: 10px
     
   &__button
     width: 100%
@@ -144,7 +159,7 @@
     line-height: 2.2rem
     font-family: $caveatRegular
     margin-bottom: 13px
-    padding-left: 7px;
+    padding-left: 7px
     p
       margin-bottom: 21px
   &__social
