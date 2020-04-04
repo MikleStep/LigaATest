@@ -39,7 +39,7 @@ var path = {
     //Тут мы укажем, за изменением каких файлов мы хотим наблюдать
     html: 'src/**/*.html',
     js: 'src/js/**/*.js',
-    style: 'src/style/**/*.sass',
+    style: 'src/style/**/*.css',
     img: 'src/img/**/*.*',
     fonts: 'src/fonts/**/*.*'
   },
