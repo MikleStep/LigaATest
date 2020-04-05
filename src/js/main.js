@@ -196,21 +196,18 @@ $('input').blur(function () {
 });
 
 $(document).ready(function () {
-  $('.bootstrap-tagsinput input').focus(function () {
+  $('.bootstrap-tagsinput').click(function () {
     $('.mobile__tags-list').addClass('active');
     $(this).attr('placeholder', '');
   });
   $('.mobile__tags-list li').click(function () {
     var text = $(this).text();
-    var tag = $('<span class="tag label label-info"></span>');
-    $(tag).text(text).append('<span data-role="remove" class="tags__remove"></span>').appendTo($('.bootstrap-tagsinput'));
-  });
-  $('.mobile__tags-list').click(function () {
-    $(this).removeClass('active');
-    $('.bootstrap-tagsinput input').css('height', '0');
-  });
-  $('.tags__remove').click(function () {
-    $(this).unwrap();
+    var id = $(this).data("modal-number");
+    $('.form__input--sphere').tagsinput('add', text);
   });
 
+  $('.mobile__tags-list').click(function () {
+    $(this).removeClass('active');
+  });
+  
 });

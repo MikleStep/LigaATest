@@ -208,14 +208,14 @@ input:focus::placeholder {
 
 @font-face {
     font-family: Caveat;
-    src: url('../fonts/Caveat-Regular.ttf');
+    src: url('../../fonts/Caveat-Regular.ttf');
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: Helvetica;
-    src: url('../fonts/HelveticaRegular.ttf');
+    src: url('../../fonts/HelveticaRegular.ttf');
     font-weight: 400;
     font-style: normal;
 }
@@ -223,48 +223,48 @@ input:focus::placeholder {
 
 @font-face {
     font-family: Axiforma;
-    src: url('../fonts/KastelovAxiformaRegular.otf');
+    src: url('../../fonts/KastelovAxiformaRegular.otf');
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: Axiforma;
-    src: url('../fonts/KastelovAxiformaHeavy.otf');
+    src: url('../../fonts/KastelovAxiformaHeavy.otf');
     font-weight: 900;
     font-style: normal;
 }
 @font-face {
     font-family: Axiforma;
-    src: url('../fonts/KastelovAxiformaItalic.otf');
+    src: url('../../fonts/KastelovAxiformaItalic.otf');
     font-weight: 400;
     font-style: italic;
 }
 
 @font-face {
     font-family: Axiforma;
-    src: url('../fonts/KastelovAxiformaMedium.otf');
+    src: url('../../fonts/KastelovAxiformaMedium.otf');
     font-weight: 500;
     font-style: normal;
 }
 
 @font-face {
     font-family: Axiforma;
-    src: url('../fonts/KastelovAxiformaSemiBold.otf');
+    src: url('../../fonts/KastelovAxiformaSemiBold.otf');
     font-weight: 600;
     font-style: normal;
 }
 
 @font-face {
     font-family: Axiforma;
-    src: url('../fonts/AxiformaBlack.ttf');
+    src: url('../../fonts/AxiformaBlack.ttf');
     font-weight: 800;
     font-style: normal;
 }
 
 @font-face {
     font-family: Axiforma;
-    src: url('../fonts/Axiforma-Thin.ttf');
+    src: url('../../fonts/Axiforma-Thin.ttf');
     font-weight: 300;
     font-style: normal;
 }
@@ -2727,6 +2727,9 @@ footer.footer {
     .header__social-text:before {
         width: 55px;
     }
+    .header__logo-img {
+        display: block;
+    }
 }
 @media (max-width: 374px) {
     .header__social-text {
@@ -2884,6 +2887,14 @@ a .clearfix:after {
 }
 .mobile__tags-list ul li{
     font-size: 1.4rem;
+}
+.tag__remove{
+    margin-left: 8px;
+    cursor: pointer;
+}
+.tag__remove:after {
+    content: "x";
+    padding: 0px 2px;
 }
 .form {
     position: relative;
