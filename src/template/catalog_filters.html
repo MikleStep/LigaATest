@@ -1,0 +1,23 @@
+<section class="catalog__filters">
+  <form enctype="multipart/form-data" method="post" name="fileinfo" class="catalog__filter">
+    <div class="filters__price">
+      <h4 class="filters__title">Цена за сутки, <span class="filters__title--currency">₽</span></h4>
+      <div class="filters__price--wrapper">
+        <input name="priceMin" class="filters__price--field min" type="number" min="100" max="600" placeholder="от 100">
+        <input name="priceMax" class="filters__price--field max" type="number" min="100" max="600" placeholder="до 600">
+      </div>
+    </div>
+    <h4 class="filters__title">Площадь</h4>
+    <ul class="filters__area">
+
+    </ul>
+    <h4 class="filters__title">Оснащение номера</h4>
+    <ul class="filters__equipment">
+    </ul> 
+    <div class="filters__buttons">
+      <button class="filters__apply" type="submit">Применить</button>
+      <button class="filters__discharge" id="Reset">Сбросить фильтр</button>
+    </div>
+  </form>
+
+</section>

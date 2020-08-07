@@ -1,903 +1,117 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Home</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap.tagsinput/0.4.2/bootstrap-tagsinput.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Котейка</title>
   <link rel="stylesheet" href="style/main.css">
 </head>
-
 <body>
-  <div class="wrapper">
-    <header class="header">
-      <div class="container">
-        <div class="header__wrap">
-          <div class="header__left">
-            <div class="header__logo">
-              <a href="#">
-                <div class="header__logo-img">
-                  <img src="img/logo.png" height="45" width="45" />
-                </div>
-                <div class="header__logo-text">
-                  <p>
-                    Твой <br>
-                    Бренд
-                  </p>
-                </div>
-              </a>
-            </div>
-            <div class="header__text">
-              <p>
-                Регистрируем торговые <br>
-                марки в Украине
-              </p>
-            </div>
-          </div>
-          <div class="header__right">
-            <div class="header__social social-wrap">
-              <a href="#">
-                <svg height="27.924" viewBox="0 0 32.072 27.924" width="32.072" xmlns="http://www.w3.org/2000/svg">
-                  <path class="ng-tns-c1-0"
-                    d="M.567,32.79l7.39,2.758,2.86,9.2a.87.87,0,0,0,1.382.416l4.119-3.358a1.229,1.229,0,0,1,1.5-.042l7.43,5.394a.871.871,0,0,0,1.365-.527L32.053,20.45a.871.871,0,0,0-1.166-.99L.558,31.16A.872.872,0,0,0,.567,32.79Zm9.789,1.29,14.443-8.9a.252.252,0,0,1,.3.4l-11.92,11.08a2.471,2.471,0,0,0-.766,1.478l-.406,3.009a.373.373,0,0,1-.729.053L9.721,35.716A1.454,1.454,0,0,1,10.356,34.08Z"
-                    transform="translate(0 -19.401)"></path>
-                </svg>
-              </a>
-              <a href="#">
-                <svg height="32.663" viewBox="0 0 29.678 32.663" width="29.678" xmlns="http://www.w3.org/2000/svg">
-                  <path class="ng-tns-c1-0"
-                    d="M127,99.7a43.548,43.548,0,0,0-16.343,0,9.429,9.429,0,0,0-5.939,5.688,31.26,31.26,0,0,0,0,13.412,9.429,9.429,0,0,0,5.939,5.688h0a.225.225,0,0,1,.183.22v6.519a.362.362,0,0,0,.624.25l3.1-3.178,2.911-2.989a.222.222,0,0,1,.165-.067,43.59,43.59,0,0,0,9.361-.756,9.426,9.426,0,0,0,5.939-5.688,31.223,31.223,0,0,0,0-13.412A9.423,9.423,0,0,0,127,99.7Zm.083,19.431a5.027,5.027,0,0,1-2.16,2.38,5.192,5.192,0,0,1-.934.3c-.365-.111-.712-.185-1.035-.319a23.509,23.509,0,0,1-8.86-5.921,22.988,22.988,0,0,1-3.389-5.186c-.435-.884-.8-1.8-1.175-2.715a2.355,2.355,0,0,1,.69-2.319,5.447,5.447,0,0,1,1.825-1.371,1.172,1.172,0,0,1,1.465.347,18.9,18.9,0,0,1,2.267,3.173,1.51,1.51,0,0,1-.423,2.045c-.172.117-.328.253-.488.385a1.6,1.6,0,0,0-.368.388,1.063,1.063,0,0,0-.071.934,8.449,8.449,0,0,0,4.745,5.254,2.415,2.415,0,0,0,1.216.3c.743-.087.984-.9,1.5-1.328a1.418,1.418,0,0,1,1.708-.075c.549.347,1.08.72,1.609,1.1a18.424,18.424,0,0,1,1.514,1.153A1.2,1.2,0,0,1,127.084,119.128Zm-4.318-7.795c-.208,0-.126,0-.047,0a.535.535,0,0,1-.552-.529,5.507,5.507,0,0,0-.1-.7,1.967,1.967,0,0,0-.725-1.138,1.89,1.89,0,0,0-.591-.285c-.268-.077-.547-.056-.815-.122a.5.5,0,0,1-.406-.58.526.526,0,0,1,.555-.423,3.008,3.008,0,0,1,3.081,3,1.387,1.387,0,0,1,0,.424.435.435,0,0,1-.366.354C122.8,111.33,122.8,111.331,122.766,111.334Zm-1.055-4.566a5.967,5.967,0,0,0-1.654-.508c-.249-.041-.5-.066-.752-.1a.476.476,0,0,1-.451-.535.47.47,0,0,1,.524-.465,6.876,6.876,0,0,1,2.866.747,5.8,5.8,0,0,1,3.154,4.5c.014.092.036.183.043.275.017.227.028.455.045.755a2.017,2.017,0,0,1-.043.3.5.5,0,0,1-.935.051,1.322,1.322,0,0,1-.052-.423,5.3,5.3,0,0,0-.67-2.658A4.948,4.948,0,0,0,121.711,106.767Zm5.608,6.26c-.351,0-.508-.289-.531-.6-.045-.622-.076-1.248-.162-1.865a7.816,7.816,0,0,0-6.294-6.533c-.488-.087-.988-.11-1.482-.162-.313-.033-.722-.052-.791-.44a.534.534,0,0,1,.527-.6c.084,0,.169,0,.254,0,4.2.118.256.009.011,0a8.886,8.886,0,0,1,8.725,7.349c.131.737.178,1.49.236,2.238A.525.525,0,0,1,127.319,113.028Z"
-                    transform="translate(-103.991 -98.923)"></path>
-                </svg>
-              </a>
-              <a href="#">
-                <svg height="31.791" viewBox="0 0 32.488 31.791" width="32.488" xmlns="http://www.w3.org/2000/svg">
-                  <path class="ng-tns-c1-0"
-                    d="M27.7,4.218a16.986,16.986,0,0,0-11.452-4.3,16.986,16.986,0,0,0-11.452,4.3A14.064,14.064,0,0,0,0,14.711a13.783,13.783,0,0,0,2.773,8.271l-1.4,8.727,8.829-3.261A17.542,17.542,0,0,0,16.244,29.5,16.986,16.986,0,0,0,27.7,25.2a14.064,14.064,0,0,0,4.792-10.493A14.064,14.064,0,0,0,27.7,4.218ZM17.668,18.96,14.077,16.15l-8.589,3.4,9.828-9.775,3.634,2.9,7.862-3.048Zm0,0"
-                    transform="translate(0 0.082)"></path>
-                </svg>
-              </a>
-              <span href="#" class="contain">
-                <svg height="32.032" viewBox="0 0 32.031 32.032" width="32.031" xmlns="http://www.w3.org/2000/svg">
-                  <g class="ng-tns-c1-0" data-name="Group 30" id="Group_30" transform="translate(0 0)">
-                    <g>
-                      <path
-                        d="M31.409,25.47,27.858,23.1,24.7,21a1.4,1.4,0,0,0-1.878.3L20.87,23.815a1.391,1.391,0,0,1-1.776.368,22.743,22.743,0,0,1-6.351-4.894,22.906,22.906,0,0,1-4.894-6.351,1.391,1.391,0,0,1,.368-1.776l2.511-1.953a1.4,1.4,0,0,0,.3-1.878L8.994,4.271,6.562.623A1.4,1.4,0,0,0,4.679.2l-2.8,1.683A3.427,3.427,0,0,0,.318,3.9c-.767,2.8-.922,8.966,8.965,18.853s16.056,9.732,18.853,8.965a3.426,3.426,0,0,0,2.014-1.556l1.683-2.8A1.4,1.4,0,0,0,31.409,25.47Z"
-                        transform="translate(0 0)"></path>
-                    </g>
-                  </g>
-                </svg>
-                <div class="header__social-hidden">
-                  <ul>
-                    <li>
-                      <span>
-                        Бесплатно по Киеву
-                      </span>
-                      <a href="tel:044123456">
-                        044 123 456
-                      </a>
-                    </li>
-                    <li>
-                      <span>
-                        Vodafone
-                      </span>
-                      <a href="tel:+380501234567">
-                        +38 050 123 4567
-                      </a>
-                    </li>
-                    <li>
-                      <span>
-                        Киевстар
-                      </span>
-                      <a href="tel:+380961234567">
-                        +38 096 123 4567
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </span>
-              <div class="header__social-text">
-                <p>
-                  ты можешь прямо сейчас задать <br>
-                  вопросы нашему менеджеру
-                </p>
-              </div>
-            </div>
-          </div>
+  <header class="header">
+    <div class="container">
+      <div class="header__wrapper">
+        <div class="header__logo">
+          <a href="/" class="header__logo--link">
+            <img src="img/icon/main_logo.svg" alt="Логотип Котейка">
+          </a>
         </div>
+        <nav class="header__nav">
+          <a href="#" class="nav__item">
+            Почему мы?
+          </a>
+          <a href="#" class="nav__item">
+            Номера
+          </a>
+          <a href="#" class="nav__item">
+            Отзывы
+          </a>
+          <a href="#" class="nav__item">
+            Как нас найти
+          </a>
+        </nav>
       </div>
-    </header>
-    <main>
-      <div class="registration reveal">
-        <div class="container container_width_huge">
-          <div class="registration__wrap">
-            <form action="" class="disabled-enter">
-              <div class="registration__quiz">
-                <div class="registration__card active">
-                  <h2>
-                    Зарегистрируй свой бренд
-                  </h2>
-                  <div class="registration__step-count">
-                    шаг 1 из 3
-                  </div>
-                  <div class="registration__text">
-                    <p>
-                      Введи название и нишу в который ты хочешь зарегистрировать ТМ,<br>
-                      чтобы проверить не занята ли она уже кем то другим
-                    </p>
-                  </div>
-                  <div class="registration__fields">
-                    <div class="registration__fields-item">
-                      <div class="type-input">
-                        <input type="text" placeholder="Название  вашего бренда ">
-                        <div class="type-input__text">
-                          пример: Старбакс
-                        </div>
-                      </div>
-                      <div class="type-input">
-                        <!--<input type="text"  id="tokenfield" />-->
-                        <input type="text" id="tokenfield">
-                        <div class="tags-field">
-                          <span>
-                            Кофеин
-
-                            <span class="close-tag">
-                              <img src="img/close.png" />
-                            </span>
-                          </span>
-                        </div>
-                        <div class="tags-list">
-                          <ul>
-                            <li>
-                              Кофе
-                            </li>
-                            <li>
-                              Кофейня
-                            </li>
-                            <li>
-                              Кофе машина
-                            </li>
-                            <li>
-                              Кофе машина
-                            </li>
-                            <li>
-                              Кофе машина
-                            </li>
-                            <li>
-                              Кофе машина
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="type-input__text">
-                          пример: Kофейня и производство кофе
-                        </div>
-                      </div>
-                    </div>
-                    <div class="responsive-input-text" style="display: none">
-                      <div class="type-input__text">
-                        пример: Старбакс
-                      </div>
-                      <div class="type-input__text">
-                        Kофейня и производство кофе
-                      </div>
-                    </div>
-
-                    <div class="registration__fields-item">
-                      <div class="type-submit type-submit_type_next">
-                        <button>ПРОВЕРИТЬ</button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="enticement">
-                    <div class="enticement__brand">
-                      <div class="enticement__brand-name">
-                        Стоимость бренда Apple, 2019 год
-                      </div>
-                      <div class="enticement__brand-money">
-                        $ 205 500 000 000
-                      </div>
-                    </div>
-                    <div class="enticement__quote">
-                      <p>
-                        «Самый дорогой актив при продаже компании это ее бренд, до 50%» <br>
-                        Андрей Федорив, №1 маркетолог Украины
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="registration__card registration__card_type_loading">
-                  <div class="loading-text">
-
-                    <p>
-
-
-                      <span>
-                        Открываем картотеку
-                      </span>
-
-                      <span>
-                        Открываем картотеку
-                      </span>
-                      <span>
-                        Открываем картотеку
-                      </span>
-                      <span>
-                        Еще что-то открываем
-                      </span>
-                      <span>
-                        Открываем картотеку
-                      </span>
-                      <span>
-                        Совпадений не найдено!)
-                      </span>
-
-
-
-
-                    </p>
-                  </div>
-                  <div class="loading-dots">
-                    <span>
-
-                    </span>
-                    <span>
-
-                    </span>
-                    <span>
-
-                    </span>
-                  </div>
-                </div>
-                <div class="registration__card">
-                  <div class="alert">
-                    <p>
-                      Марка <span class="alert__brand">Старбакс</span> занята в нишах: «кофе», «продажа <br>
-                      кофемолок», и «кофемашины» вы можете заполнить <br>
-                      форму для консультации или проверте другое название
-                    </p>
-                  </div>
-                  <div class="registration__step-count">
-                    шаг 2 из 3
-                  </div>
-                  <div class="registration__text">
-                    <p>
-                      Чтобы продолжить регистрировать марку «Старбакс» просто заполните форму ниже и<br>
-                      дайте ответ на 5 простых вопросов от нашего менеджера. Это займет не больше 10 минут.
-                    </p>
-                  </div>
-                  <div class="registration__fields">
-                    <div class="registration__fields-item">
-                      <div class="type-input">
-                        <input type="text" placeholder="Ваше имя">
-                        <div class="type-input__text">
-                          <p>
-                            Введите ваше имя, чтобы мы знали <br>
-                            как к вам обращаться
-                          </p>
-                        </div>
-                      </div>
-                      <div class="type-input">
-                        <input type="tel" placeholder="Номер телефона">
-                        <div class="type-input__text">
-                          <p>
-                            Введите ваш номер телефона в формате +380 50 123 45 67 чтобы, <br>
-                            наш менеджер смог с вами связаться и продолжить регистрацию
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="registration__fields-item">
-                      <div class="type-submit type-submit_type_next">
-                        <button type="submit">ПОДАТЬ ЗАЯВКУ</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="registration__card registration__card_type_limit">
-                  <div class="alert alert_gray">
-                    <p class="text-center">
-                      Вы превысили дневной лимит запросов.
-                    </p>
-                  </div>
-                  <div class="registration__step-count">
-                    шаг 2 из 3
-                  </div>
-                  <div class="registration__text">
-                    <p>
-                      Заполните форму ниже, и наш менеджер проверит свободно ли имя <br>
-                      торговой марки в ручном режиме или попробуйте снова завтра. </p>
-                  </div>
-                  <div class="registration__fields">
-                    <div class="registration__fields-item">
-                      <div class="type-input">
-                        <input type="text" placeholder="Ваше имя">
-                      </div>
-                      <div class="type-input">
-                        <input type="tel" placeholder="Номер телефона/месенджера">
-                      </div>
-                    </div>
-                    <div class="registration__fields-item">
-                      <div class="type-submit type-submit_type_next">
-                        <button type="submit">ПОДАТЬ ЗАЯВКУ</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="registration__card">
-                  <div class="alert alert_bg_yellow">
-                    <p>
-                      Марка <span class="alert__brand">Старбакс</span> занята в нишах: «кофе», «продажа <br>
-                      кофемолок», и «кофемашины» вы можете заполнить <br>
-                      форму для консультации или проверте другое название
-                    </p>
-                  </div>
-                  <div class="alert__check-another">
-                    <a href="#">
-                      проверить другое название
-                    </a>
-                  </div>
-                  <div class="registration__step-count">
-                    шаг 2 из 3
-                  </div>
-                  <div class="registration__text">
-                    <p>
-                      Чтобы продолжить регистрировать марку «Старбакс» просто заполните форму ниже и<br>
-                      дайте ответ на 5 простых вопросов от нашего менеджера. Это займет не больше 10 минут.
-                    </p>
-                  </div>
-                  <div class="registration__fields">
-                    <div class="registration__fields-item">
-                      <div class="type-input">
-                        <input type="text" placeholder="Ваше имя">
-                      </div>
-                      <div class="type-input">
-                        <input type="tel" placeholder="Номер телефона">
-                      </div>
-                    </div>
-                    <div class="registration__fields-item">
-                      <div class="type-submit type-submit_type_next">
-                        <button type="submit">ПОДАТЬ ЗАЯВКУ</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="registration__card thanks">
-                  <div class="thanks__left">
-                    <div class="thanks__title">
-                      <p>
-                        Спасибо ваша заявка <br>
-                        успешно принята
-                      </p>
-                    </div>
-                    <p>
-                      Наш менеджер уже набирает ваш номер
-                    </p>
-                    <div class="thanks__bottom">
-                      <p>
-                        Спасибо за доверие!
-                      </p>
-                      <p>
-                        Пишите мне с предложениями или <br>
-                        вопросами, буду рад помочь.
-                      </p>
-
-                      <p>
-                        Виталий, основатель сервиса
-                      </p>
-                      <div class="thanks__social social-wrap">
-                        <a href="#">
-                          <svg height="32.758" viewBox="0 0 32.758 32.758" width="32.758"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                              d="M23.718,0H9.04A9.05,9.05,0,0,0,0,9.04V23.718a9.05,9.05,0,0,0,9.04,9.04H23.718a9.05,9.05,0,0,0,9.04-9.04V9.04A9.05,9.05,0,0,0,23.718,0Zm6.134,23.718a6.141,6.141,0,0,1-6.134,6.134H9.04a6.14,6.14,0,0,1-6.133-6.134V9.04A6.14,6.14,0,0,1,9.04,2.906H23.718A6.141,6.141,0,0,1,29.851,9.04V23.718Z">
-                            </path>
-                            <path
-                              d="M49.409,40.97a8.441,8.441,0,1,0,8.441,8.441A8.45,8.45,0,0,0,49.409,40.97Zm0,13.975a5.534,5.534,0,1,1,5.534-5.534A5.541,5.541,0,0,1,49.409,54.945Z"
-                              transform="translate(-33.03 -33.032)"></path>
-                            <path d="M121.052,28.251a2.13,2.13,0,1,0,1.507.624A2.14,2.14,0,0,0,121.052,28.251Z"
-                              transform="translate(-95.879 -22.777)"></path>
-                          </svg>
-                        </a>
-                        <a href="#">
-                          <svg height="32.758" viewBox="0 0 17.711 32.758" width="32.711"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                              d="M39.121.007,34.873,0C30.1,0,27.016,3.164,27.016,8.062v3.717H22.745a.668.668,0,0,0-.668.668v5.386a.668.668,0,0,0,.668.668h4.271V32.09a.668.668,0,0,0,.668.668h5.573a.668.668,0,0,0,.668-.668V18.5h4.994a.668.668,0,0,0,.668-.668l0-5.386a.668.668,0,0,0-.668-.668h-5V8.628c0-1.514.361-2.283,2.334-2.283H39.12a.668.668,0,0,0,.668-.668v-5A.668.668,0,0,0,39.121.007Z"
-                              transform="translate(-22.077)"></path>
-                          </svg>
-                        </a>
-                        <a href="#">
-                          <svg height="27.924" viewBox="0 0 32.072 27.924" width="32.072"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path class="ng-tns-c1-0"
-                              d="M.567,32.79l7.39,2.758,2.86,9.2a.87.87,0,0,0,1.382.416l4.119-3.358a1.229,1.229,0,0,1,1.5-.042l7.43,5.394a.871.871,0,0,0,1.365-.527L32.053,20.45a.871.871,0,0,0-1.166-.99L.558,31.16A.872.872,0,0,0,.567,32.79Zm9.789,1.29,14.443-8.9a.252.252,0,0,1,.3.4l-11.92,11.08a2.471,2.471,0,0,0-.766,1.478l-.406,3.009a.373.373,0,0,1-.729.053L9.721,35.716A1.454,1.454,0,0,1,10.356,34.08Z"
-                              transform="translate(0 -19.401)"></path>
-                          </svg> </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="thanks__right">
-                    <div class="thanks__man">
-                      <img src="img/man.png" alt="">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </form>
-          </div>
+    </div>
+  </header>
+  <main class="catalog cd-main-content">
+    <div class="container">
+      <section class="catalog__header">
+        <h1 class="catalog__title">Наши номера</h1>
+        <div class="catalog__sort">
+          <button type="button" class="catalog__sort--button"><img src="img/icon/sort_arrow.svg" alt=""></button>
+          <fieldset data-filter-group data-logic="or" class="catalog__modal">
+            <button type="button" data-sort="price:asc">По площади</button>
+            <button type="button" data-sort="price:descending">По площади</button>
+            <button type="button" data-sort="area:asc">По цене</button>
+            <button type="button" data-sort="area:descending">По цене</button>
+          </fieldset>
         </div>
-      </div>
-      <div class="mobile__form">
-        <div class="container">
-          <div class="form form__first">
-            <div class="form__container">
-              <h3 class="form__title form__second--container">
-                Зарегистрируй
-                свой бренд
-              </h3>
-              <form method="post" action="" name="first-step" class="form__item" id="first-step">
-                <fieldset>
-                  <p class="form__steps form__second--container">шаг 1 из 3</p>
-                  <p class="form__description form__second--container">Введи название и нишу в который ты хочешь зарегистрировать,
-                    чтобы проверить
-                    не занято ли оно уже кем то другим</p>
-                  <div class="form__wrapper">
-                    <input class="form__input form__input--top" type="text" name="brand"
-                      placeholder="Название вашего бренда" id="form__input--brand" minlength="1" required />
-                    <input class="form__input form__input--down" type="text" placeholder="Сфера деятельности" value=""
-                    data-role="tagsinput" id="form__input--sphere" minlength="1" required>
-                    <div class="mobile__tags-list tags-list">
-                      <ul>
-                        <li data-modal-number="coffe">Кофе</li>
-                        <li data-modal-number="coffe-1">Кофейня</li>
-                        <li data-modal-number="coffe-2">Кофе машина</li>
-                        <li data-modal-number="coffe-3">Кофе машина</li>
-                        <li data-modal-number="coffe-4">Кофе машина</li>
-                        <li data-modal-number="coffe-5">Кофе машина</li>
-                      </ul>
-                    </div>
-                  </div>
-                  <p class="form__example">пример: <span>Старбакс - Kофейня</span></p>
-                  <div class="form__error form__error--first">
-                  </div>
-                  <input type="button" name="next" class="form__button" id="first-submit" value="Проверить" />
-                </fieldset>
-              </form>
-            </div>
-          </div>
-          <div class="form form__second disable">
-            <div class="form__container">
-              <div class="form__notice form__second--container">
-                <p>Марка <span class="form__notice--highlight">Старбакс</span> свободна в нише «кофейня», вы
-                  можете подать
-                  заявку на регистрацию сейчас
-                  в форме ниже</p>
-              </div>
-              <form method="post" action="" name="second-step" class="form__item" id="second-step">
-                <fieldset>
-                  <p class="form__steps form__second--container">шаг 2 из 3</p>
-                  <p class="form__description form__second--container">Чтобы продолжить регистрировать марку «Старбакс» просто
-                    заполните форму ниже
-                    и дайте ответ на 5 простых вопросов от нашего менеджера. Это займет не больше 10 минут.
-                  </p>
-                  <div class="form__wrapper">
-                    <input class="form__input form__input--top" type="text" name="name" placeholder="Ваше имя"
-                      id="form__input--name" minlength="1" required />
-                    <input class="form__input form__input--down" type="tel" name="tel" id="form__input--tel"
-                      placeholder="Номер телефона" id="form__input--tel"
-                      pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" minlength="10" />
-                  </div>
-                  <div class="form__error form__error--second">
-                  </div>
-                  <input type="button" id="second-submit" name="next" class="form__button" value="Подать заявку" />
-                </fieldset>
-              </form>
-            </div>
-          </div>
-          <div class="form form__third disable">
-            <div class="form__container">
-              <h3 class="form__title form__second--container">
-                Ваша заявка
-                успешно
-                отправлена
-              </h3>
-              <p class="form__note form__second--container">Наш менеджер уже набирает ваш номер</p>
-              <div class="form__gratitude form__second--container">
-                <p class="form__gratitude--text">Спасибо за доверие!</p>
-                <p class="form__gratitude--text">Пишите мне с предложениями или
-                  вопросами, буду рад помочь.</p>
-                <p class="form__gratitude--text">Виталий, основатель сервиса</p>
-              </div>
-              <div class="form__social form__second--container">
-                <a href="#" class="form__social--item inst clearfix">
-                  <svg id="_002-instagram-logo" data-name="002-instagram-logo" xmlns="http://www.w3.org/2000/svg"
-                    width="38.25" height="38.25" viewBox="0 0 38.25 38.25">
-                    <path id="Path_4" data-name="Path 4"
-                      d="M27.694,0H10.555A10.568,10.568,0,0,0,0,10.556V27.694A10.567,10.567,0,0,0,10.555,38.25H27.694A10.568,10.568,0,0,0,38.25,27.694V10.556A10.568,10.568,0,0,0,27.694,0Zm7.162,27.694a7.17,7.17,0,0,1-7.162,7.162H10.555a7.17,7.17,0,0,1-7.162-7.162V10.556a7.17,7.17,0,0,1,7.162-7.162H27.694a7.17,7.17,0,0,1,7.162,7.162V27.694Z" />
-                    <path id="Path_5" data-name="Path 5"
-                      d="M50.824,40.97a9.856,9.856,0,1,0,9.856,9.856A9.867,9.867,0,0,0,50.824,40.97Zm0,16.318a6.462,6.462,0,1,1,6.462-6.462A6.469,6.469,0,0,1,50.824,57.288Z"
-                      transform="translate(-31.699 -31.701)" />
-                    <path id="Path_6" data-name="Path 6"
-                      d="M121.41,28.251a2.487,2.487,0,1,0,1.76.729A2.5,2.5,0,0,0,121.41,28.251Z"
-                      transform="translate(-92.015 -21.859)" />
-                  </svg>
-                </a>
-                <a href="#" class="form__social--item fb clearfix">
-                  <svg id="_001-facebook-logo" data-name="001-facebook-logo" xmlns="http://www.w3.org/2000/svg"
-                    width="18.364" height="33.966" viewBox="0 0 18.364 33.966">
-                    <path id="Path_3" data-name="Path 3"
-                      d="M39.749.007,35.345,0C30.4,0,27.2,3.281,27.2,8.359v3.854H22.77a.693.693,0,0,0-.693.693V18.49a.693.693,0,0,0,.693.693H27.2V33.274a.692.692,0,0,0,.693.693h5.778a.693.693,0,0,0,.693-.693V19.183H39.54a.692.692,0,0,0,.693-.693l0-5.584a.693.693,0,0,0-.693-.693h-5.18V8.946c0-1.57.374-2.368,2.42-2.368h2.967a.693.693,0,0,0,.692-.693V.7A.693.693,0,0,0,39.749.007Z"
-                      transform="translate(-22.077)" />
-                  </svg>
-                </a>
-                <a href="#" class="form__social--item telegram clearfix">
-                  <svg id="telegram" xmlns="http://www.w3.org/2000/svg" width="33.822" height="29.448"
-                    viewBox="0 0 33.822 29.448">
-                    <path id="XMLID_497_"
-                      d="M.6,33.521l7.793,2.909,3.016,9.7a.917.917,0,0,0,1.457.439l4.344-3.541a1.3,1.3,0,0,1,1.58-.044l7.835,5.689a.918.918,0,0,0,1.439-.555L33.8,20.508a.919.919,0,0,0-1.23-1.044L.588,31.8A.919.919,0,0,0,.6,33.521Zm10.324,1.36L26.152,25.5a.265.265,0,0,1,.32.42L13.9,37.6a2.606,2.606,0,0,0-.808,1.559l-.428,3.173a.394.394,0,0,1-.769.056l-1.647-5.786A1.534,1.534,0,0,1,10.921,34.881Z"
-                      transform="translate(0 -19.401)" />
-                  </svg>
-                </a>
+      
+      </section>
+      <div class="catalog__main">
+        <section class="catalog__filters">
+          <form enctype="multipart/form-data" method="post" name="fileinfo" class="catalog__filter">
+            <div class="filters__price">
+              <h4 class="filters__title">Цена за сутки, <span class="filters__title--currency">₽</span></h4>
+              <div class="filters__price--wrapper">
+                <input name="priceMin" class="filters__price--field min" type="number" min="100" max="600" placeholder="от 100">
+                <input name="priceMax" class="filters__price--field max" type="number" min="100" max="600" placeholder="до 600">
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="annotation">
-        <div class="container">
-          <div class="annotation__cost">
-            <p class="annotation__cost--subtitle">
-              Стоимость бренда Apple, 2018 год
-            </p>
-            <p class="annotation__cost--title">
-              $ 182 800 000 000
-            </p>
-          </div>
-          <p class="annotation__description">«Самый дорогой актив при продаже компании
-            это ее бренд, до 50%»</p>
-          <p class="annotation__description">Андрей Федорив, №1 маркетолог Украины</p>
-        </div>
-      </div>
-      <div class="question">
-        <div class="container">
-          <h2 class="reveal">
-            Как зарегистрировать свой <br>
-            бренд самостоятельно?
-          </h2>
-          <div class="question__wrap ">
-            <div class="question__item reveal">
-              <div class="question__title">
-                Подать заявку
-              </div>
-              <div class="question__answer">
-                <p>
-                  На этом этапе важно правильно заполнить и отправить заявку на сайте укрпатента, подобрать
-                  соответствующий клас, и если нужно то несколько. Каждый клас стоит 1000грн, мы поможем сэкономить
-                  деньги и подобрать один оптимальный клас, или несколько оптимальных. Лучше ознакомится со всеми и
-                  проконсультироваться с юристом, чтобы подобрать соответствующий, потому как класса «продажа товаров»
-                  не существует
-                </p>
-              </div>
-            </div>
-            <div class="question__item reveal">
-              <div class="question__title">
-                Подготовить <br>
-                логотип
-              </div>
-              <div class="question__answer">
-                <p>
-                  Подготовить изображение логотипа, в нескольких вариантах, важно учесть кокой логотип текстовый,
-                  изобразительный или комбинирующий, цветной или черно-белый. По тому что от этого меняется стоимость
-                  сервисного сбора до 2500 грн. Мы поможем сэкономить эти деньги вам правильно подготовив документ с
-                  логотипом
-                </p>
-              </div>
-            </div>
-            <div class="question__item reveal">
-              <div class="question__title">
-                Уплатить сбор
-              </div>
-              <div class="question__answer">
-                <p>
-                  Оплатить сбор и указать код в соответствии с утвержденным классификатором кодов сборов в нише
-                  регистрации интеллектуальной собственности, или его не примут и возможно не вернут деньги.
-                </p>
-              </div>
-            </div>
-            <div class="question__item reveal">
-              <div class="question__title">
-                Еще один сбор
-              </div>
-              <div class="question__answer">
-                <p>
-                  Еще один сбор после того как придет решения про регистрацию. Нужно отправить чек почтой, иначе
-                  регистрацию отменят. Так как они не видят платежа. Или доплатить 600 грн, чтобы продолжить
-                  регистрацию. Но помните, что вас никто не предупредит - так работает наш государственный орган. Вы
-                  должны сами это контролировать.
-                </p>
-              </div>
-            </div>
-            <div class="question__item reveal">
-              <div class="question__title">
-                Другие моменты
-              </div>
-              <div class="question__answer">
-                <p>
-                  Служба поддержки укрпатента не очень оперативно отвечает, также будут переводить на других операторов,
-                  и они не обязаны консультировать вас, но будьте настойчивы.
-                </p>
-                <p>
-                  Также есть такое понятие как предварительный отказ. Его вам могут отправить на почту, и вам нужно
-                  доказать почему вы используете этот знак и почему вам нужно его зарегистрировать.
-                </p>
-                <p>
-                  Следите за вашей почтой на нее еще придут инструкции по следующим этапам регистрации. Формальной
-                  экспертизы, квалифицированной экспертизы и этап подготовке к публикации.
-                </p>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-      <div class="master reveal">
-        <div class="container container_width_huge">
-          <div class="master__wrap">
-            <div class="master__left">
-              <img src="img/man.png" alt="">
-            </div>
-            <div class="master__right">
-              <h2>
-                Привет
-              </h2>
-              <div class="master__text">
-                <p>
-                  Меня зовут Виталии я создал этот сайт для предпринимателей которые только начинают свой бизнес, и
-                  хотят его защитить,
-                </p>
-                <p>
-                  В 4% случаев торговую марку не позволяют зарегистрировать по не совсем конкретным причинам. В таком
-                  случаи я лично гарантирую компенсацию всей сумы.
-                </p>
-                <p>
-                  Пишите мне с предложениями или вопросами, я всегда рад ответить.
-                </p>
-              </div>
-              <div class="master__social social-wrap">
-                <a href="#">
-                  <svg height="32.758" viewBox="0 0 32.758 32.758" width="32.758" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M23.718,0H9.04A9.05,9.05,0,0,0,0,9.04V23.718a9.05,9.05,0,0,0,9.04,9.04H23.718a9.05,9.05,0,0,0,9.04-9.04V9.04A9.05,9.05,0,0,0,23.718,0Zm6.134,23.718a6.141,6.141,0,0,1-6.134,6.134H9.04a6.14,6.14,0,0,1-6.133-6.134V9.04A6.14,6.14,0,0,1,9.04,2.906H23.718A6.141,6.141,0,0,1,29.851,9.04V23.718Z">
-                    </path>
-                    <path
-                      d="M49.409,40.97a8.441,8.441,0,1,0,8.441,8.441A8.45,8.45,0,0,0,49.409,40.97Zm0,13.975a5.534,5.534,0,1,1,5.534-5.534A5.541,5.541,0,0,1,49.409,54.945Z"
-                      transform="translate(-33.03 -33.032)"></path>
-                    <path d="M121.052,28.251a2.13,2.13,0,1,0,1.507.624A2.14,2.14,0,0,0,121.052,28.251Z"
-                      transform="translate(-95.879 -22.777)"></path>
-                  </svg>
-                </a>
-                <a href="#">
-                  <svg height="32.758" viewBox="0 0 17.711 32.758" width="32.711" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M39.121.007,34.873,0C30.1,0,27.016,3.164,27.016,8.062v3.717H22.745a.668.668,0,0,0-.668.668v5.386a.668.668,0,0,0,.668.668h4.271V32.09a.668.668,0,0,0,.668.668h5.573a.668.668,0,0,0,.668-.668V18.5h4.994a.668.668,0,0,0,.668-.668l0-5.386a.668.668,0,0,0-.668-.668h-5V8.628c0-1.514.361-2.283,2.334-2.283H39.12a.668.668,0,0,0,.668-.668v-5A.668.668,0,0,0,39.121.007Z"
-                      transform="translate(-22.077)"></path>
-                  </svg>
-                </a>
-                <a href="#">
-                  <svg height="27.924" viewBox="0 0 32.072 27.924" width="32.072" xmlns="http://www.w3.org/2000/svg">
-                    <path class="ng-tns-c1-0"
-                      d="M.567,32.79l7.39,2.758,2.86,9.2a.87.87,0,0,0,1.382.416l4.119-3.358a1.229,1.229,0,0,1,1.5-.042l7.43,5.394a.871.871,0,0,0,1.365-.527L32.053,20.45a.871.871,0,0,0-1.166-.99L.558,31.16A.872.872,0,0,0,.567,32.79Zm9.789,1.29,14.443-8.9a.252.252,0,0,1,.3.4l-11.92,11.08a2.471,2.471,0,0,0-.766,1.478l-.406,3.009a.373.373,0,0,1-.729.053L9.721,35.716A1.454,1.454,0,0,1,10.356,34.08Z"
-                      transform="translate(0 -19.401)"></path>
-                  </svg> </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="portfolio">
-        <div class="container">
-          <h2 class="reveal">
-            Наши работы это
-          </h2>
-          <div class="portfolio__wrap">
-            <div class="porfolio__left reveal">
-              <p>
-                <span class="portfolio__count">367+</span> <br>
-                успешно зарегистрированных
-              </p>
-            </div>
-            <div class="portfolio__right reveal">
-              <a href="#" class="portfolio__item">
-                <img src="img/1.png" alt="">
-              </a>
-              <a href="#" class="portfolio__item">
-                <img src="img/2.png" alt="">
-              </a>
-              <a href="#" class="portfolio__item">
-                <img src="img/3.png" alt="">
-              </a>
-              <a href="#" class="portfolio__item">
-                <img src="img/4.png" alt="">
-              </a>
-              <a href="#" class="portfolio__item">
-                <img src="img/5.png" alt="">
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="news">
-        <div class="container">
-          <h2 class="reveal">
-            Интересные новости связаные <br>
-            с известными брендами
-          </h2>
-          <div class="news__wrap">
-            <div class="news__item reveal">
-              <div class="news__date">
-                2016
-              </div>
-              <div class="news__title">
-                Guess и Gucci
-              </div>
-              <div class="news__text">
-                <p>
-                  В иске Gucci обвинила Guess в подделке и недобросовестной конкуренции, нарушении торговой марки,
-                  потребовав $221 млн. Компенсации за нанесенный ущерб.
-                </p>
-                <p>
-                  Gucci подала два иска: один в Нью-Йорке, другой – в Милане. В Нью-Йорке дело закрыли в пользу бренда и
-                  присудили $4,7 млн. компенсации за ущерб. В Милане суд признал сторону Guess, отметив, что
-                  использование буквы «G» широко распространено в модной отрасли.
-                </p>
-              </div>
-            </div>
-            <div class="news__item reveal">
-              <div class="news__date">
-                2016
-              </div>
-              <div class="news__title">
-                Guess и Gucci
-              </div>
-              <div class="news__text">
-                <p>
-                  В иске Gucci обвинила Guess в подделке и недобросовестной конкуренции, нарушении торговой марки,
-                  потребовав $221 млн. Компенсации за нанесенный ущерб.
-                </p>
-                <p>
-                  Gucci подала два иска: один в Нью-Йорке, другой – в Милане. В Нью-Йорке дело закрыли в пользу бренда и
-                  присудили $4,7 млн. компенсации за ущерб. В Милане суд признал сторону Guess, отметив, что
-                  использование буквы «G» широко распространено в модной отрасли.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="alert__check-another reveal">
-            <a href="#">
-              Читать еще
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="faq">
-        <div class="container">
-          <h2 class="reveal">
-            Часто задаваемые вопросы
-          </h2>
-          <div class="faq__wrap">
-            <ul>
-              <li class="reveal">
-                <a href="#">
-                  Можно ли зарегистрировать мою торговую марку в США или Европе?
-                </a>
-                <div class="faq__hidden">
-                  <p>
-                    От 7-8 до 18 месяцев, в зависимости от сумы уплаты сервисного взноса
-                  </p>
-                </div>
-              </li>
-              <li class="reveal">
-                <a href="#">
-                  Как проверить на коком этапе статус регистрации моей марки?
-                </a>
-                <div class="faq__hidden">
-                  <p>
-                    От 7-8 до 18 месяцев, в зависимости от сумы уплаты сервисного взноса
-                  </p>
-                </div>
-              </li>
-
-              <li class="active reveal">
-                <a href="#">
-                  Сколько временнее идет регистрация?
-                </a>
-                <div class="faq__hidden">
-                  <p>
-                    От 7-8 до 18 месяцев, в зависимости от сумы уплаты сервисного взноса
-                  </p>
-                </div>
-              </li>
-              <li class="reveal">
-                <a href="#">
-                  Могут ли отказать в регистрации торговой марки если я уже оплатил?
-                </a>
-                <div class="faq__hidden">
-                  <p>
-                    От 7-8 до 18 месяцев, в зависимости от сумы уплаты сервисного взноса
-                  </p>
-                </div>
-              </li>
-              <li class="reveal">
-                <a href="#">
-                  Как проверить статус регистрации?
-                </a>
-                <div class="faq__hidden">
-                  <p>
-                    От 7-8 до 18 месяцев, в зависимости от сумы уплаты сервисного взноса
-                  </p>
-                </div>
-              </li>
+            <h4 class="filters__title">Площадь</h4>
+            <ul class="filters__area">
+        
             </ul>
+            <h4 class="filters__title">Оснащение номера</h4>
+            <ul class="filters__equipment">
+            </ul> 
+            <div class="filters__buttons">
+              <button class="filters__apply" type="submit">Применить</button>
+              <button class="filters__discharge" id="Reset">Сбросить фильтр</button>
+            </div>
+          </form>
+        
+        </section>
+        <section class="catalog__wrapper">
+          <template id="catalog__template">
+            <div class="mix catalog__template--card">
+              <div class="catalog__card card">
+                <img class="card__img">
+                <div class="card__description">
+                  <h4 class="card__title">
+                  </h4>
+                  <div class="card__info">
+                    <p class="card__param size"></p>
+                    <p class="card__param area"></p>
+                    <div class="card__param--equipment">
+                      <p class="card__param equipment">Оснащение номера</p>
+                    </div>
+                    <p class="card__param price">Цена за сутки: <span class="card__param--price"></span></p>
+                    <button class="card__button">Забронировать</button>
+                  </div>
+        
+                </div>
+              </div>
+            </div>
+          </template>
           </div>
-        </div>
+          <div class="gap"></div>
+        </section> <!-- cd-gallery -->
       </div>
-    </main>
-    <footer class="footer">
-      <div class="container container_width_huge">
-        <div class="footer__wrap">
-          <div class="footer__contacts reveal">
-            <div class="footer__contacts-item">
-              <div class="footer__contacts-title">
-                Телефон
-              </div>
-              <div class="footer__contacts-value">
-                <a href="tel:0441234567">
-                  044 123 45 67
-                </a>
-              </div>
-            </div>
-            <div class="footer__contacts-item">
-              <div class="footer__contacts-title">
-                Почта
-              </div>
-              <div class="footer__contacts-value">
-                <a href="mailto:hi@tvoybarnd.com">
-                  hi@tvoybarnd.com
-                </a>
-              </div>
-            </div>
-            <div class="footer__contacts-item">
-              <div class="footer__contacts-title">
-                Адрес
-              </div>
-              <div class="footer__contacts-value">
-                <p>
-                  г. Черновцы, ул. Горького, дом 12
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="footer__bottom reveal">
-            <p>
-              © 2019, Твой Бренд. Все права защищены
-            </p>
-            <a href="#">
-              Разработан в Nuts.
-            </a>
-          </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__wrapper">
+        <div class="footer__policy">
+          <p>© 2020 Все права защищены</p>
+          <p>Политика конфиденциальности</p>
         </div>
+        <p>Сделано в <strong>Koteyka_Production</strong></p>
       </div>
-    </footer>
-  </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src='js/jquery.easing.min.js'></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/inputmask/inputmask.min.js"></script>
-  <script src="//cdn.jsdelivr.net/bootstrap.tagsinput/0.4.2/bootstrap-tagsinput.min.js"></script>
-  <script src="js/jquery-ui.min.js"></script>
-  <script src="js/tagify.min.js"></script>
-  <script src="https://unpkg.com/scrollreveal"></script>
+    </div>
+  </footer>
+  <script src="js/mixitup.min.js"></script>
+  <script src="js/mixitup-multi.min.js"></script>
   <script src="js/main.js"></script>
 </body>
-
 </html>

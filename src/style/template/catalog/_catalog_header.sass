@@ -1,0 +1,71 @@
+.catalog
+  &__header
+    display: flex
+    justify-content: space-between
+    margin-bottom: 8px
+  &__title
+    font-family: $rubikBold
+    font-size: 3.6rem
+    padding-left: 10px
+  &__sort
+    display: flex
+    align-items: center
+    position: relative
+    button
+      background: inherit
+      border: none
+      cursor: pointer
+    &--button
+      z-index: 10
+      img
+        transform: rotate(180deg)
+        transition: 0.4s
+  &__modal
+    position: absolute
+    display: flex
+    overflow: hidden
+    z-index: -1
+    padding-top: 12px
+    padding-left: 30px
+    padding-bottom: 12px
+    padding-right: 15px
+    max-height: 0
+    min-width: 180px
+    top: calc(50% - 20px)
+    right: -28px
+    font-size: 1.4rem
+    font-family: $latoRegular
+    border: none
+    background: $white
+    border-radius: 4px
+    opacity: 0
+    transition: 0.4s
+    button
+      position: relative
+      margin-bottom: 25px
+      &::after
+        position: absolute
+        content: ''
+        width: 7px
+        height: 10px
+        left: -15px
+        top: calc(50% - 5px)
+        background-image: url('../img/icon/sort_arrow_icon.svg')
+        background-repeat: no-repeat
+      &:nth-child(2n)
+        &::after
+          transform: rotate(180deg)
+      &:last-child
+        margin-bottom: 0
+  &__sort
+    &.active
+      .catalog
+        &__modal
+          z-index: 9
+          max-height: 169px
+          box-shadow: 0 2px 12px rgba(173,152,143,.18)
+          opacity: 1
+          transition: 0.4s
+        &__sort--button img
+          transform: rotate(0)
+          transition: 0.4s

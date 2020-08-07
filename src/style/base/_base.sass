@@ -1,0 +1,29 @@
+$black: #1A212F
+$white: #FFFEFD
+$red: #E86556
+*
+  margin: 0px
+  padding: 0px
+  box-sizing: border-box
+html
+  font-size: 10px 
+  line-height: 1.2
+body
+  margin: 0
+  padding: 0 0px
+  background-color: #ffffff
+  position: relative
+  padding-top: 87px
+  font-family: $latoMedium
+ul, li
+  list-style: none
+  &.modal-open 
+    overflow: hidden
+
+.container
+  +wrapper
+
+
+@media screen and (max-width: 1000px)
+  html
+    font-size: 8.75px

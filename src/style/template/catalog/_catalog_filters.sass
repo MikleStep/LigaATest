@@ -1,0 +1,110 @@
+.catalog
+  &__filters
+    +col()
+    +size(3)
+    fieldset
+      border: none
+      background-color: inherit
+  .filters
+    &__title
+      font-size: 1.6rem
+      color: $black
+      font-family: $latoMedium
+      margin-bottom: 2rem
+      &--currency
+        font-size: 1.4rem
+        font-family: $latoRegular
+        font-weight: 400
+    &__price, &__area, &__equipment
+      margin-bottom: 3.5rem
+    &__price
+      .filters__title
+        margin-bottom: 1.6rem
+      &--wrapper
+        display: flex
+        justify-content: flex-start
+      input
+        border: 1px solid #E1E1E1
+        padding: 7px 5px
+        font-size: 1.4rem
+        font-family: $latoRegular
+        width: 100px
+        &:first-child
+          margin-right: 1rem
+    &__area, &__equipment
+      li
+        display: flex
+        align-items: center
+        margin-bottom: 1.5rem
+        font-size: 1.4rem
+        font-family: $latoRegular
+      input
+        position: absolute
+        z-index: -1
+        opacity: 0
+      input+label
+        display: inline-flex
+        align-items: center
+        user-select: none
+        cursor: pointer
+      input+label::before 
+        content: ''
+        display: inline-block
+        width: 2rem
+        height: 2rem
+        flex-shrink: 0
+        flex-grow: 0
+        border: 1px solid #E1E1E1
+        margin-right: 0.5em
+        background-repeat: no-repeat
+        background-position: center center
+        background-size: 50% 50%
+      input:checked+label::before
+        background-image: url(../img/icon/filters_check.svg)
+    &__buttons
+      display: flex
+      flex-direction: column
+      button
+        background: inherit
+        border: none
+        width: 185px
+        height: 42px
+        padding-top: 1.3rem
+        padding-bottom: 17px
+        padding-left: 20px
+        padding-right: 20px
+        border-radius: 25px
+        font-size: 1.4rem
+        line-height: 1
+        font-family: $latoSemiBold
+        cursor: pointer
+        outline: inherit
+        outline-width: 2px
+        outline-color: $black
+        transition: 0.2s 
+      .filters__apply
+        border: 2px solid #FAC663
+        background-color: #FAC663
+        margin-bottom: 11px
+        &:hover
+          background-color:#f7ad21
+          transition: 0.2s
+        &:acive
+          background-color: #f7a407
+          transition: 0.1s
+      .filters__discharge
+        opacity: 0
+        z-index: -1
+        border: 2px solid #FAC663
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25)
+        &:hover
+          border-color:#f7ad21
+          background-color: #fff7e8
+          transition: 0.2s
+        &:acive
+          border-color: #f7a407
+          background-color: #f7ecd8
+          transition: 0.1s
+        
+
+    

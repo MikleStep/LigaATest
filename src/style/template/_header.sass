@@ -1,0 +1,33 @@
+.header
+  width: 100%
+  padding-top: 0.9rem
+  padding-bottom: 1rem
+  position: fixed
+  top: 0
+  background: $white
+  box-shadow: 0 4px 4px rgba(0,0,0,.25)
+  z-index: 20
+  &__wrapper
+    +row-flex
+    width: 100%
+    justify-content: space-between
+  &__logo
+    width: 6.4rem
+    height: 5.4rem
+  &__nav
+    +row-flex
+    align-items: center
+    font-size: 1.6rem
+    color: $black
+    font-family: $latoSemiBold
+    .nav
+      &__item
+        margin-right: 30px
+        text-shadow: 0 4px 4px rgba(0,0,0,.25)
+        -webkit-text-stroke-width: 0.1px;
+        -webkit-text-stroke-color: #ffffff;
+        color: $black
+        text-decoration: none
+        &:last-child
+          margin-right: 0
+        

@@ -1,19 +1,19 @@
 'use strict';
 
 var gulp = require("gulp"),
-    watch = require("gulp-watch"),
-    prefixer = require("gulp-autoprefixer"),
-    uglify = require("gulp-uglify"),
-    sass = require("gulp-sass"),
-    sourcemaps = require("gulp-sourcemaps"),
-    rigger = require("gulp-rigger"),
-    cssmin = require("gulp-clean-css"),
-    imagemin = require("gulp-imagemin"),
-    pngquant = require("imagemin-pngquant"),
-    rimraf = require("rimraf"),
-    browserSync = require("browser-sync").create(),
-    webpack = require("webpack-stream"),
-    reload = browserSync.reload;
+  watch = require("gulp-watch"),
+  prefixer = require("gulp-autoprefixer"),
+  uglify = require("gulp-uglify"),
+  sass = require("gulp-sass"),
+  sourcemaps = require("gulp-sourcemaps"),
+  rigger = require("gulp-rigger"),
+  cssmin = require("gulp-clean-css"),
+  imagemin = require("gulp-imagemin"),
+  pngquant = require("imagemin-pngquant"),
+  rimraf = require("rimraf"),
+  browserSync = require("browser-sync").create(),
+  webpack = require("webpack-stream"),
+  reload = browserSync.reload;
 
 const isDevMode = false;
 const isProdMode = !isDevMode;
@@ -39,7 +39,7 @@ var path = {
     //Тут мы укажем, за изменением каких файлов мы хотим наблюдать
     html: 'src/**/*.html',
     js: 'src/js/**/*.js',
-    style: 'src/style/**/*.css',
+    style: 'src/style/**/*.sass',
     img: 'src/img/**/*.*',
     fonts: 'src/fonts/**/*.*'
   },
@@ -83,16 +83,16 @@ const webpackConfig = {
 
 
 
-gulp.task('html:build', function() {
+gulp.task('html:build', function () {
   return gulp.src(path.src.html) //Выберем файлы по нужному пути
-      .pipe(rigger()) //Прогоним через rigger
-      .pipe(gulp.dest(path.build.html)) //Выплюнем их в папку build
-      .pipe(reload({ stream: true })); //И перезагрузим наш сервер для обновлений
+    .pipe(rigger()) //Прогоним через rigger
+    .pipe(gulp.dest(path.build.html)) //Выплюнем их в папку build
+    .pipe(reload({ stream: true })); //И перезагрузим наш сервер для обновлений
 });
 
-gulp.task("js:build", function() {
+gulp.task("js:build", function () {
   return gulp
-    .src(path.src.js)
+    .src(path.src.js, '!js/slick.min.js')
     .pipe(webpack(webpackConfig))
     .pipe(gulp.dest(path.build.js))
     .pipe(uglify())
@@ -100,7 +100,7 @@ gulp.task("js:build", function() {
     .pipe(reload({ stream: true })); //И перезагрузим наш сервер для обновлений
 });
 
-gulp.task('style:build', function() {
+gulp.task('style:build', function () {
   return gulp.src(path.src.style)
     .pipe(sourcemaps.init())
     .pipe(sass())
@@ -111,7 +111,7 @@ gulp.task('style:build', function() {
     .pipe(reload({ stream: true }));
 });
 
-gulp.task('image:build', function() {
+gulp.task('image:build', function () {
   return gulp.src(path.src.img) //Выберем наши картинки
     .pipe(
       imagemin({
@@ -126,7 +126,7 @@ gulp.task('image:build', function() {
     .pipe(reload({ stream: true }));
 });
 
-gulp.task('fonts:build', function() {
+gulp.task('fonts:build', function () {
   return gulp.src(path.src.fonts).pipe(gulp.dest(path.build.fonts));
 });
 
@@ -140,7 +140,7 @@ gulp.task('build',
   )
 );
 
-gulp.task('watch', function() {
+gulp.task('watch', function () {
   gulp.watch([path.watch.html], gulp.parallel('html:build'));
   gulp.watch([path.watch.style], gulp.parallel('style:build'));
   gulp.watch([path.watch.js], gulp.parallel('js:build'));
@@ -148,7 +148,7 @@ gulp.task('watch', function() {
   gulp.watch([path.watch.fonts], gulp.parallel('fonts:build'));
 });
 
-gulp.task('webserver', function() {
+gulp.task('webserver', function () {
   browserSync.init({
     server: {
       baseDir: './build'
@@ -156,8 +156,8 @@ gulp.task('webserver', function() {
   });
 });
 
-gulp.task('clean', function(cb) {
+gulp.task('clean', function (cb) {
   rimraf(path.clean, cb);
 });
-
+gulp.task('server', gulp.parallel('webserver', 'watch'));
 gulp.task('start', gulp.parallel('build', 'webserver', 'watch'));
